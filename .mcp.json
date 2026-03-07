@@ -1,0 +1,14 @@
+{
+  "inputs": [],
+  "servers": {
+    "MusicPlayerMcp": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "C:/Users/eduar/Desktop/Projects/C#/MusicPlayerMcp/MusicPlayerMcp/MusicPlayerMcp.csproj"
+      ]
+    }
+  }
+}
