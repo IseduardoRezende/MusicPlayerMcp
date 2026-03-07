@@ -31,7 +31,6 @@
 	<RepositoryUrl>https://github.com/IseduardoRezende/MusicPlayerMcp</RepositoryUrl>
 	<RepositoryType>git</RepositoryType>
 	<PackageIcon>musicplayer.png</PackageIcon>
-	<PackageTags>AI;MCP;Model-Context-Protocol;Git;Documentation;Automation;Dotnet</PackageTags>
 
 	<PackageReleaseNotes>
 		- Initial beta release (0.1.0-beta).
