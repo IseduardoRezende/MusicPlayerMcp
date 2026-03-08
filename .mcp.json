@@ -9,6 +9,16 @@
         "--project",
         "C:/Users/eduar/Desktop/Projects/C#/MusicPlayerMcp/MusicPlayerMcp/MusicPlayerMcp.csproj"
       ]
+    },
+    "MusicPlayerMcpDocker": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "eduardorezende01/musicPlayerMcp"
+      ],
+      "env": {}
     }
   }
 }
