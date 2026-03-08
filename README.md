@@ -67,7 +67,7 @@ This tool **MUST** be used whenever the user asks to stop or cancel music. It ha
        "run",
         "-i",
         "--rm",
-        "eduardorezende01/musicPlayerMcp"
+        "eduardorezende01/musicplayermcp"
       ]
     }
   }
@@ -85,6 +85,7 @@ From an MCP‑capable client (such as Copilot), the assistant simply invokes the
 
 - The server uses youtube.com as the source for audio; it does not require the user to install or configure a browser.
 - It is a **stdio tool** and has no GUI.
+- For **"dnx"** commands the .NET 10 runtime must be installed: https://dotnet.microsoft.com/en-us/download/dotnet/10.0
 - Designed for quick control via natural language; implementation details are intentionally hidden from users.
 - The audio files are downloaded into Temp folder (eg. windows -> C:\Users\x\AppData\Local\Temp\MusicPlayerMcp)
 
