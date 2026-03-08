@@ -89,5 +89,9 @@ From an MCP‑capable client (such as Copilot), the assistant simply invokes the
 - Designed for quick control via natural language; implementation details are intentionally hidden from users.
 - The audio files are downloaded into Temp folder (eg. windows -> C:\Users\x\AppData\Local\Temp\MusicPlayerMcp)
 
+## Limitations
+
+- Support for Youtube Playlist URL is not implemented
+
 Enjoy seamless, AI‑driven local music playback!
 
