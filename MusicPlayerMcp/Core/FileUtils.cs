@@ -1,4 +1,5 @@
-﻿using YoutubeExplode.Videos.Streams;
+﻿using YoutubeExplode.Videos;
+using YoutubeExplode.Videos.Streams;
 
 namespace MusicPlayerMcp.Core
 {
@@ -6,7 +7,7 @@ namespace MusicPlayerMcp.Core
     {
         const string FolderName = "MusicPlayerMcp";
 
-        public static string GetMusicsFolder()
+        private static string GetMusicsFolder()
         {
             var path = Path.Combine(Path.GetTempPath(), FolderName);
 
@@ -16,12 +17,31 @@ namespace MusicPlayerMcp.Core
             return path;
         }
 
-        public static string GetFilePath(IStreamInfo streamInfo, string path)
+        public static bool TryGetFilePath(VideoId? videoId, out string? path)
         {
-            if (streamInfo is null || string.IsNullOrWhiteSpace(path))
+            path = null;
+
+            if (videoId is null)
+                return false;
+
+            var files = Directory.GetFiles(GetMusicsFolder());
+
+            if (files is null || files.Length == 0)
+                return false;
+
+            path = files.FirstOrDefault(c => c.Contains(videoId));
+            return path is not null;
+        }
+
+        public static string GetFilePath(IStreamInfo streamInfo, VideoId? videoId)
+        {
+            if (streamInfo is null || videoId is null)
                 return string.Empty;
 
-            return Path.Combine(path, $"audio_{Guid.CreateVersion7():N}.{streamInfo.Container}");
+            if (TryGetFilePath(videoId, out string? path))
+                return path!;
+
+            return Path.Combine(GetMusicsFolder(), $"{videoId}.{streamInfo.Container}");
         }
     }
 }
