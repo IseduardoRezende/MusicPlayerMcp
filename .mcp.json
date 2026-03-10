@@ -16,7 +16,7 @@
         "run",
         "-i",
         "--rm",
-        "eduardorezende01/musicPlayerMcp"
+        "eduardorezende01/musicplayermcp"
       ],
       "env": {}
     }
