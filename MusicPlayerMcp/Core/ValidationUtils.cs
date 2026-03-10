@@ -2,9 +2,9 @@
 {
     public class ValidationUtils
     {
-        public static bool IsValidUri(string value)
+        public static bool IsValidUri(string? value)
         {
-            return Uri.TryCreate(value, UriKind.Absolute, out var uri) && (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps);
+            return Uri.TryCreate(value, UriKind.Absolute, out Uri? uri) && (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps);
         }
     }
 }
