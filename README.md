@@ -87,11 +87,11 @@ From an MCP‑capable client (such as Copilot), the assistant simply invokes the
 - It is a **stdio tool** and has no GUI.
 - For **"dnx"** commands the .NET 10 runtime must be installed: https://dotnet.microsoft.com/en-us/download/dotnet/10.0
 - Designed for quick control via natural language; implementation details are intentionally hidden from users.
-- The audio files are downloaded into Temp folder (eg. windows -> C:\Users\x\AppData\Local\Temp\MusicPlayerMcp)
+- The audio files are downloaded into **Temp folder** (eg. windows -> C:\Users\x\AppData\Local\Temp\MusicPlayerMcp)
+- The server uses the https://github.com/Tyrrrz/YoutubeExplode library and It works by scraping raw page data and exploiting reverse-engineered internal endpoints, therefore, problems may occur.
 
-## Limitations
+## Features, Bugs and Orders
 
-- Support for Youtube Playlist URL is not implemented
+- Follow the issues page: https://github.com/IseduardoRezende/MusicPlayerMcp/issues
 
 Enjoy seamless, AI‑driven local music playback!
-
